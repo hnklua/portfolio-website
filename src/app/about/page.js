@@ -33,8 +33,8 @@ export default function AboutPage() {
         <div className='min-h-screen py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
                 <div className='text-center mb-12'>
-                    <h1 className='text-4xl font-bold mb-4'>About Me</h1>
-                    <p className='text-gray-600 text-lg'>
+                    <h1 className='text-4xl text-emerald-300 font-bold mb-4'>About Me</h1>
+                    <p className='text-amber-200 text-lg text-shadow-md'>
                         Computer Science undergraduate passionate about building software thats fun and functional!
                     </p>
                 </div>
@@ -52,17 +52,17 @@ export default function AboutPage() {
                     {/* Text content */}
                     <div className='text-center md:text-left'>
                         <h2 className='text-2xl font-bold mb-2'>Washington State University</h2>
-                        <p className='text-gray-700 mb-4'>
+                        <p className='text-gray-400 mb-4'>
                         B.S. Computer Science | Expected Graduation: 2027
                         </p>
-                        <p className='text-gray-600'>
+                        <p className='text-gray-300'>
                         Focus on full-stack development, game development, and systems architecture.
                         </p>
                     </div>
                 </div>
                 </CardContent>
                 <CardFooter>
-                    <Button asChild variant='outline' className='w-full gap-2'>
+                    <Button asChild variant='ghost' className='w-full hover:bg-amber-200 hover:!bg-amber-200 hover:text-black transition-colors'>
                         <Link
                             href={githuburl}
                             target="_blank"
@@ -84,7 +84,7 @@ export default function AboutPage() {
                             </CardHeader>
 
                             <CardContent>
-                                <p className='text-gray-700'>{section.paragraph}</p>
+                                <p className='text-gray-300'>{section.paragraph}</p>
                             </CardContent>
                         </Card>
                     ))}

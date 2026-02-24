@@ -1,5 +1,4 @@
 // projects/page.js 
-// Components 
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -63,15 +62,15 @@ export default function Projectpage() {
 
     return (
         <div className='min-h-screen py-8 px-4'>
-            <div className='max-w-6x1 mx-auto'>
+            <div className='max-w-4xl mx-auto'>
                 <div className='text-center mb-12'>
-                    <h1 className='text-4x1 font-bold mb-4'>My Projects</h1>
-                    <p className='text-gray-600 max-w-2x1 mx-auto'>
+                    <h1 className='text-4xl text-emerald-300 font-bold mb-4'>My Projects</h1>
+                    <p className='text-amber-200 text-shadow-md max-w-2x1 mx-auto'>
                         A collection of my personal programming projects.
                     </p>
                 </div>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap 6'>
+                <div className='flex flex-col gap-6'>
                     {projects.map((project, index) => (
                         <Card key={index} className='h-full flex flex-col'>
                             <CardHeader>
@@ -79,7 +78,7 @@ export default function Projectpage() {
                             </CardHeader>
 
                             <CardContent className="flex-grow">
-                                <p className='text-gray-700 mb-4'>{project.description}</p>
+                                <p className='text-white-700 mb-4'>{project.description}</p>
 
                                 <div className='flex flex-wrap gap-2'>
                                     {project.technologies.map((tech, techIndex) => (
@@ -92,7 +91,7 @@ export default function Projectpage() {
                             </CardContent>
 
                             <CardFooter>
-                                <Button asChild variant='outline' className="w-full">
+                                <Button asChild variant='ghost' className="w-full hover:bg-amber-200 hover:!bg-amber-200 hover:text-black transition-colors">
                                     <Link 
                                     href={project.githuburl}
                                     target="_blank"
