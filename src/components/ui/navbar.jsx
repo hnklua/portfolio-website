@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from 'next/link'; 
 import { Menu, X } from "lucide-react"; 
+import { GiGems } from "react-icons/gi";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false); 
@@ -19,8 +20,9 @@ export default function Navbar() {
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     {/* Website logo */}
-                    <Link href="/" className="text-xl font-bold">
-                        hnklua
+                    <Link href="/" className="text-xl font-bold flex items-center gap-2 group">
+                        <GiGems className="text-2xl text-gray-300 group-hover:text-emerald-300 transition-colors"/>
+                        <span className="group-hover:text-emerald-200 transition-colors">hnklua</span>
                     </Link>
 
                     {/* Desktop Menu */}
@@ -29,7 +31,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm hover:text-emerald-600 transition-colors"
+                                className="text-sm hover:text-emerald-300 transition-colors"
                             >
                                 {link.name}
                             </Link>

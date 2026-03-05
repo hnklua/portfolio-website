@@ -7,6 +7,7 @@ import { HiComputerDesktop } from "react-icons/hi2";
 import { RxGithubLogo } from "react-icons/rx"
 import { FaPaintBrush } from "react-icons/fa";
 import { FaScrewdriverWrench } from "react-icons/fa6";
+import { TbTools } from "react-icons/tb";
 
 export default function AboutPage() {
     const biography = [
@@ -23,8 +24,13 @@ export default function AboutPage() {
         {
             title: "Backend & Systems",
             paragraph: "My backend proficiency stems from game development, including WebGL for my Game engine and systems programming utilizing multi-threaded applications.",
-            icon: [<FaScrewdriverWrench key="bnd" className='2xl'/>],
+            icon: [<FaScrewdriverWrench key="bnd" className='2xl'/>]
         },
+        {
+            title: "Tools",
+            paragraph: "My primary languages are C/C++, Java and Javascript/Typescript. I develop in Linux via the Windows Subsystem for Linux based on Debian/Ubuntu. My primary device is a 2024 ASUS Zephyrus G14.",
+            icon: [<TbTools key ="tls" className='2xl'/>]
+        }
     ]
 
     const githuburl = "https://github.com/hnklua"

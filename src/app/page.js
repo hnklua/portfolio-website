@@ -30,8 +30,8 @@ export default function HomeCard() {
       description: "Here is my official Resume for a detailed overview of all the projects I've worked on!",
       icon: <PiReadCvLogoDuotone className='text-2xl'/>,
       buttonText: "View CV",
-      buttonLink: "/home", // Temporary Resume is not completed
-      external: false,
+      buttonLink: "/Software Engineer Resume.pdf", 
+      external: true,
       download: true
     },
     {
